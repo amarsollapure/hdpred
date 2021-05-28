@@ -1,0 +1,152 @@
+body{
+}
+
+p{
+  text-align: center;
+}
+.btn-align{
+  margin-left: 10px;
+}
+.li-align{
+margin-left: 5px;
+border-bottom: 2px solid #f8f9fa;
+
+}
+.li-align:hover{
+border-bottom: 2px solid blue;
+transition-delay: 0.1s;
+}
+
+
+.hrt-title{
+  font-family:'Roboto', sans-serif;
+  margin-top: 6%;
+  margin-left: 10%;
+  display: inline-block;
+}
+.temp1{
+  display: inline-block;
+  width: 10%;
+  background-color: black;
+}
+.ht11{
+  font-family:'Nunito', sans-serif;
+  font-size: 6vw;
+  margin-bottom: 0;
+  color: #150485;
+}
+.hrt-main-img{
+  position:absolute;
+  display: inline-block;
+  margin-left: 5vw;
+  animation: moveleft 4s linear 1;
+  animation-delay: 1s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  }
+@keyframes moveleft {
+    0%{
+      transform: translateX(600px);
+      visibility: visible;
+    }
+    100%{
+      transform: translateX(0);
+      visibility: visible;
+    }
+}
+
+.btn-main{
+margin-top: 2vw;
+}
+
+.first{
+  background-color: #0779e4;
+  width: 50%;
+  height: 100vh;
+
+}
+.second{
+  width: 50%;
+}
+.second-part{
+  background-color: white;
+  margin-top: 6%;
+  height: 100vh;
+}
+.hrt-img{
+  margin-top: 4%;
+  margin-left: 5%;
+  display: inline-block;
+  animation: zoomin 5s linear 1;
+  animation-delay: 2s;
+  animation-fill-mode:forwards;
+  visibility:hidden;
+}
+@keyframes zoomin {
+   0%{
+     transform: scale(0.5);
+     visibility: visible;
+   }
+   100%{
+     transform: scale(1);
+     visibility: visible;
+   }
+}
+.heart-content{
+  display: inline-block;
+  position: absolute;
+  width: 40%;
+  text-align: justify;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.hcontent{
+  font-family: 'Rubik', sans-serif;
+  line-height: 1cm;
+}
+.htitle{
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  text-decoration:underline;
+}
+.doc_img_background{
+  height: 90vh;
+  background-image:linear-gradient(to bottom, rgba(1, 1, 1, 0.22), rgba(1,1,1,0.22)),
+      url('/static/doc112.jpg');
+  background-size: cover;
+}
+.has_hd_warning {
+  color: white;
+  font-size: 450%;
+  position: absolute;
+  top: 35%;
+  right: 2%;
+}
+.consultDoc_button{
+  position:absolute;
+  top: 70%;
+  right: 10%;
+}
+.carousel_style{
+  height: 100vh;
+}
+.nohd-text{
+  display: inline;
+  position: absolute;
+  top: 30%;
+  color: blue;
+
+}
+.nohd11{
+  font-size: 400%;
+  margin-left: 40px;
+  font-family:'Nunito', sans-serif;
+  font-size: 6vw;
+  color: #150485;
+}
+
+.happy_img{
+  position: absolute;
+  height: 0%;
+  right: 10%;
+}

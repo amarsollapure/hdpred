@@ -1,0 +1,23 @@
+.body{
+backgroud-color:blue;
+}
+.form-title{
+  text-align: center;
+  text-decoration: underline;
+  margin-top: ;
+  margin-bottom: 0;
+}
+
+.colalign{
+  margin-left:2%;
+  margin-right: 2px;
+  padding-top: 1.5%;
+}
+.prdct-btn{
+  margin-top: 1%;
+  align-items: center;
+}
+.li-align:hover{
+border-bottom: 2px solid blue;
+transition-delay: 0.2s;
+}

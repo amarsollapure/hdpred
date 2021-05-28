@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>House Price Pridiction</title>
+    <link rel="stylesheet" href="C:\Users\Amar\Desktop\House_Price_Prediction-master\House_Price_Prediction-master\static\mycss.css">
+    <link rel="stylesheet" href="C:\Users\Amar\Desktop\House_Price_Prediction-master\House_Price_Prediction-master\static\mycss2.css">
+    <link rel="stylesheet" type="text/css" href="./static/mycss.css" , media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="./static/mycss2.css" , media="screen,projection"/>
+</head>
+<body>
+<div id="body">
+    <div class='background'>
+        <div class="text1">
+            <h1>WELCOME TO ML HOUSE PRICE PRIDICTION</h1>
+            <p id=header>made with ❤️ by Viraat Saaran</p>
+        </div>
+    </div>
+    <div class=paragraph1>
+        <p>
+            I created a machine learning model using the multiple linear regression equation. I tries to pridict the
+            price of the house(in USD) based on the certain pretrained data .
+        </p>
+
+    </div>
+
+    <div id=result>
+
+        <p> {{pred}}</p>
+    </div>
+
+    <div class=paragraph2>
+        <p>
+            Its a fun project ,I just want to make the end product using the machine learning model,which I created in
+            python. For more information <a href="C:/Users/Amar/Desktop/House_Price_Prediction-master/House_Price_Prediction-master/consultDoc.html" >click here.</a>
+        </p>
+    </div>
+    <div class=form>
+
+        <form class="form-floating" action='/predict' method="post">
+            <div class="row g-2">
+
+                <div class="col-md colalign">
+                    <div class="form-floating">
+                        <input name="a" type="number" class="form-control" id="floatingInputGrid" required placeholder=" ">
+                        <label for="floatingInputGrid">Age</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-2">
+                <div class="col-md colalign">
+                    <div class="form-floating">
+                        <select name="b" class="form-select" id="floatingSelectGrid" aria-label="Gender">
+                            <option selected disabled>Select one from list</option>
+                            <option value="1">Male</option>
+                            <option value="0">Female</option>
+                        </select>
+                        <label for="floatingSelectGrid">Gender</label>
+                    </div>
+                </div>
+
+                <div class="col-md colalign">
+                    <div class="form-floating">
+                        <select name="l" class="form-select" id="floatingSelectGrid" aria-label="cp">
+                            <option selected disabled>Select one from list</option>
+                            <option value="1">Typical Angina</option>
+                            <option value="2">Atypical Angina</option>
+                            <option value="3">Non-Anginal pain</option>
+                            <option value="4">Asymptomatic</option>
+                        </select>
+                        <label for="floatingSelectGrid">Chest Pain Type</label>
+                    </div>
+                </div>
+
+                <div class="col-md colalign">
+                    <div class="form-floating">
+                        <input name="c" type="number" class="form-control" id="floatingInputGrid" required placeholder=" ">
+                        <label for="floatingInputGrid"> Resting blood pressure</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-2">
+                <div class="col-md colalign">
+                    <div class="form-floating">
+                        <input name="d" type="number" class="form-control" id="floatingInputGrid" required placeholder=" ">
+                        <label for="floatingInputGrid">Serum Cholesterol</label>
+                    </div>
+                </div>
+                <div class="col-md colalign">
+                    <div class="form-floating">
+                        <select name="e" class="form-select" id="floatingSelectGrid" aria-label="Gender">
+                            <option selected disabled>Select one from list</option>
+                            <option value="1">True</option>
+                            <option value="0">False</option>
+                        </select>
+                        <label for="floatingSelectGrid">Fasting blood sugar</label>
+                    </div>
+                </div>
+
+                <div class="col-md colalign">
+                    <div class="form-floating">
+                        <select name="f" class="form-select" id="floatingSelectGrid" required aria-label="Gender">
+                            <option selected disabled>Select one from list</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <label for="floatingSelectGrid">resting electrocardiography(ECG) results</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-2">
+                <div class="col-md colalign">
+                    <div class="form-floating">
+                        <input name="g" type="number" class="form-control" id="floatingInputGrid" required placeholder=" ">
+                        <label for="floatingInputGrid">maximum heart rate achieved</label>
+                    </div>
+                </div>
+                <div class="col-md colalign">
+                    <div class="form-floating">
+                        <select name="h" class="form-select" id="floatingSelectGrid" aria-label="Gender">
+                            <option selected disabled>Select one from list</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                        <label for="floatingSelectGrid">Exercise Induced Angina</label>
+                    </div>
+                </div>
+                <div class="col-md colalign">
+                    <div class="form-floating">
+                        <input name="i" type="number" class="form-control" id="floatingInputGrid" required placeholder=" ">
+                        <label for="floatingInputGrid">ST depression induced by exercise relative to rest</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-2">
+                <div class="col-md colalign">
+                    <div class="form-floating">
+                        <select name="m" class="form-select" id="floatingSelectGrid" aria-label="cp">
+                            <option selected disabled>Select one from list</option>
+                            <option value="1">Up sloping</option>
+                            <option value="2">Flat</option>
+                            <option value="3">Down Sloping</option>
+                        </select>
+                        <label for="floatingSelectGrid">slope of the peak exercise ST segment</label>
+                    </div>
+                </div>
+                <div class="col-md colalign">
+                    <div class="form-floating">
+                        <select name="j" class="form-select" id="floatingSelectGrid" required aria-label="Gender">
+                            <option selected disabled>Select one from list</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="floatingSelectGrid">Number of major vessels colored by fluoroscopy</label>
+                    </div>
+                </div>
+                <div class="col-md colalign">
+                    <div class="form-floating">
+                        <select name="k" class="form-select" id="floatingSelectGrid" required aria-label="Gender">
+                            <option selected disabled>Select one from list</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="floatingSelectGrid">thal:Maximum heart rate achieved</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 col-6 mx-auto prdct-btn">
+                <center>
+                    <button type="submit" class="btn btn-primary" style=" font-size:4vh; width: 33%;">Predict Now
+                    </button>
+                </center>
+            </div>
+        </form>
+    </div>
+    <div id=result1>
+        <p>Knowing is not enough; we must apply. Willing is not enough; we must do</p>
+    </div>
+
+</div>
+</body>
+
+
+</html>
+
+
+<!--<form action="/predict" method="post">
+            <label class='select_label'>Do you want <b>four</b> story building? </label>
+
+            <Select id='four_story' name='four_story'>
+            <option value='1'>Yes</option>
+             <option selected value="0" >No</option>
+            </Select><br>
+             <label class='select_label'>Do you want <b>single</b> story building? </label>
+            <Select id='one_story' name='one_story'>
+            <option value='1'>Yes</option>
+             <option selected value="0" >No</option>
+            </Select><br>
+            <label class='select_label'>Do you want <b>three</b> story building? </label>
+            <Select id='three_story' name='three_story'>
+            <option value='1'>Yes</option>
+             <option selected value="0" >No</option>
+            </Select><br>
+            <label class='select_label'>Do you want <b>two</b> story building? </label>
+            <Select id='two_story' name='two_story'>
+            <option value='1'>Yes</option>
+             <option selected value="0" >No</option>
+            </Select><br>
+
+            <label>Lotsize (in square feet):</label><br>
+            <input type="number" placeholder="Enter Lotsize here" id='lotsize' name='lotsize'><br>
+
+
+
+            <label>Number of Bedrooms :</label><br>
+            <input type="number" placeholder="No. of Bedrooms" id='bedrooms' name='bedrooms'><br>
+
+            <label>Number of Bathrooms :</label><br>
+            <input type="number" placeholder="No. of Bathrooms" id='bathrooms' name='bathrooms'><br>
+
+            <label class='select_label'>What about driveway ,want one? </label>
+             <Select id='driveway' name='driveway'>
+            <option value='1'>Yes</option>
+             <option selected value="0" >No</option>
+            </Select><br>
+
+
+            <label class='select_label'>Do you want recreational room? </label>
+                <Select id='recroom' name='recroom'>
+            <option value='1'>Yes</option>
+             <option selected value="0" >No</option>
+                </Select><br>
+
+
+            <label class='select_label'>Want a full basement?</label>
+             <Select id='fullbase' name='fullbase'>
+            <option value='1'>Yes</option>
+             <option selected value="0" >No</option>
+            </Select><br>
+
+
+            <label class='select_label'>Looking for gas hot water in the house?</label>
+            <Select id='gashw' name='gashw'>
+            <option value='1'>Yes</option>
+             <option selected value="0" >No</option>
+                </Select><br>
+
+
+            <label class='select_label'>Do you want air conditioning?</label>
+          <Select id='airco' name='airco'>
+            <option value='1'>Yes</option>
+             <option selected value="0" >No</option>
+                </Select><br>
+
+
+                <label>Number of Garage Places :</label>
+            <input type="number" placeholder="No. of Garage places" id='garpl' name='garpl'><br>
+
+
+              <label class='select_label'>Do you have a prefered area?</label>
+             <Select id='prefarea' name='prefarea'>
+             <option value='1'>Yes</option>
+                <option selected value="0" >No</option>
+                </Select><br>
+                <button id=submitbtn type="submit" value="Submit">Submit</button><br>
+           </form>
+-->
